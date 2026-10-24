@@ -95,6 +95,10 @@ public:
     }
 };
 
+
+
+
+// brute force 
 class brute
 {
 public:
