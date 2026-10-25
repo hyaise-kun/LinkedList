@@ -24,7 +24,7 @@ struct Node
         back = nullptr;
     }
 };
-
+//print method 
 void print(Node *head)
 {
 
@@ -55,23 +55,23 @@ int SIZEOFLL(Node *head)
 Node *reversing(Node *head)
 {
     Node *temp = head;
-Node* holder = nullptr;
+    Node *holder = nullptr;
     while (temp != nullptr)
     {
 
-       holder = temp->back;
+        holder = temp->back;
         temp->back = temp->next;
         temp->next = holder;
 
         temp = temp->back;
     }
-  return holder->back ; 
+    return holder->back;
 }
 
 int main()
 {
 
-    vector<int> v = {1, 2, 3, 4, 6, 8};
+    vector<int> v = {1, 2, 3, 4};
     int n = v.size();
 
     Node *head = new Node(v[0]);
@@ -84,8 +84,8 @@ int main()
         prev = temp;
     }
 
-head = reversing( head);
-    print(head ); 
+    head = reversing(head);
+    print(head);
 
     return 0;
 }
