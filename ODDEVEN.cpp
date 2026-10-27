@@ -18,6 +18,12 @@ struct Node
         data = d;
         next = track;
     }
+
+
+    Node() {
+
+        next= nullptr ; 
+    }
 };
 
 void print(Node *head)
